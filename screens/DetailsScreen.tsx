@@ -1,6 +1,12 @@
 import { View, Text, Button, StyleSheet } from 'react-native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../App';
 
-export default function DetailsScreen({ navigation }) {
+type DetailsScreenProps = {
+  navigation: NativeStackNavigationProp<RootStackParamList, 'Details'>;
+};
+
+export default function DetailsScreen({ navigation }: DetailsScreenProps): JSX.Element {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Details Screen</Text>
